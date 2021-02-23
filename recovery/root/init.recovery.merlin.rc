@@ -5,13 +5,13 @@
 on early-init
     setprop sys.usb.configfs 0
 
-service fastbootd /sbin/fastbootd
+service fastbootd /system/bin/fastbootd
     disabled
     setenv LD_LIBRARY_PATH /sbin/fastboot:/sbin:/usr/lib64:/usr/lib:/sbin/lib64:/sbin/lib
     group system root readproc
     seclabel u:r:fastbootd:s0
 
-service adbd /sbin/adbd --root_seclabel=u:r:su:s0 --device_banner=recovery
+service adbd /system/bin/adbd --root_seclabel=u:r:su:s0 --device_banner=recovery
     socket adbd stream 660 system system
     seclabel u:r:adbd:s0
 
@@ -41,7 +41,7 @@ on load_persist_props_action
 on early-fs
     start logd
 
-service logd /sbin/logd
+service logd /system/bin/logd
     socket logd stream 0666 logd logd
     socket logdr seqpacket 0666 logd logd
     socket logdw dgram+passcred 0222 logd logd
@@ -64,10 +64,10 @@ on fs
 ######
 
 on boot
-    wait /sbin/fingerprint_ready 9
+    wait /system/bin/fingerprint_ready 9
     start recovery
 
-service recovery /sbin/recovery
+service recovery /system/bin/recovery
     socket recovery stream 422 system system
     disabled
     seclabel u:r:recovery:s0
@@ -82,7 +82,7 @@ service recovery /sbin/recovery
 #     restorecon /postinstall
 #    start ueventd
 
-service set_permissive /sbin/permissive.sh
+service set_permissive /system/bin/permissive.sh
     oneshot
     seclabel u:r:recovery:s0
 
@@ -150,6 +150,6 @@ on late-init
 # on property:sys.powerctl=*
 #     powerctl ${sys.powerctl}
 
-service ueventd /sbin/ueventd
+service ueventd /system/bin/ueventd
     critical
     seclabel u:r:ueventd:s0
