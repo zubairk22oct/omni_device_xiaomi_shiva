@@ -124,8 +124,8 @@ TARGET_USERIMAGES_USE_F2FS := true
 BOARD_USERDATAIMAGE_FILE_SYSTEM_TYPE := ext4
 
 # Workaround for error copying vendor files to recovery ramdisk
-BOARD_VENDORIMAGE_FILE_SYSTEM_TYPE := ext4
 TARGET_COPY_OUT_VENDOR := vendor
+TARGET_COPY_OUT_PRODUCT := product
 
 # Hack: prevent anti rollback
 PLATFORM_SECURITY_PATCH := 2099-12-31
