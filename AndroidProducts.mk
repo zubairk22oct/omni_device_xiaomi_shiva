@@ -17,8 +17,8 @@
 #
 
 PRODUCT_MAKEFILES := \
-	$(LOCAL_DIR)/omni_merlin.mk
+	$(LOCAL_DIR)/omni_lancelot.mk
 
 COMMON_LUNCH_CHOICES := \
-	omni_merlin-userdebug \
-	omni_merlin-eng
+	omni_lancelot-userdebug \
+	omni_lancelot-eng
