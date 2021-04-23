@@ -1,5 +1,4 @@
 import /init.recovery.teei_daemon.rc
-import /init.recovery.lancelot.rc
 
 on fs
     #wait /dev/block/platform/soc/${ro.boot.bootdevice}
