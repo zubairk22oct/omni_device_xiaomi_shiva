@@ -16,7 +16,7 @@
 # limitations under the License.
 #
 
-DEVICE_PATH := device/xiaomi/lancelot
+DEVICE_PATH := device/xiaomi/shiva
 
 # For building with minimal manifest
 ALLOW_MISSING_DEPENDENCIES := true
@@ -45,8 +45,8 @@ BOARD_KERNEL_TAGS_OFFSET := 0x0bc08000
 BOARD_FLASH_BLOCK_SIZE := 131072 # (BOARD_KERNEL_PAGESIZE * 64)
 TARGET_KERNEL_ARCH := arm64
 TARGET_KERNEL_HEADER_ARCH := arm64
-TARGET_KERNEL_SOURCE := kernel/xiaomi/lancelot
-TARGET_KERNEL_CONFIG := lancelot_defconfig
+TARGET_KERNEL_SOURCE := kernel/xiaomi/shiva
+TARGET_KERNEL_CONFIG := shiva_defconfig
 BOARD_BOOTIMG_HEADER_VERSION := 2
 BOARD_KERNEL_IMAGE_NAME := Image.gz
 TARGET_PREBUILT_KERNEL := $(DEVICE_PATH)/prebuilt/Image.gz
@@ -84,7 +84,7 @@ TARGET_BOOTLOADER_BOARD_NAME := mt6768
 TARGET_BOARD_PLATFORM_GPU := Mali-G52 MC2
 
 # Assert
-TARGET_OTA_ASSERT_DEVICE := lancelot
+TARGET_OTA_ASSERT_DEVICE := shiva
 
 # Partitions
 BOARD_BOOTIMAGE_PARTITION_SIZE := 67108864

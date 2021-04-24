@@ -17,8 +17,8 @@
 #
 
 PRODUCT_MAKEFILES := \
-	$(LOCAL_DIR)/omni_lancelot.mk
+	$(LOCAL_DIR)/omni_shiva.mk
 
 COMMON_LUNCH_CHOICES := \
-	omni_lancelot-userdebug \
-	omni_lancelot-eng
+	omni_shiva-userdebug \
+	omni_shiva-eng
