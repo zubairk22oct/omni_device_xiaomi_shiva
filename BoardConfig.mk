@@ -156,3 +156,36 @@ TW_INTERNAL_STORAGE_MOUNT_POINT := "data"
 TW_EXTERNAL_STORAGE_PATH := "/external_sd"
 TW_EXTERNAL_STORAGE_MOUNT_POINT := "external_sd"
 TW_SKIP_COMPATIBILITY_CHECK := true
+
+# NOTE - Dont use '-' or blank spaces in flag values , otherwise it will create build errors or other bugs in recovery (Excluding SHRP_PATH,SHRP_REC). 
+# Path of your SHRP Tree
+SHRP_PATH := device/xiaomi/shiva
+# Maintainer name *
+SHRP_MAINTAINER := zubairk22
+# Device codename *
+SHRP_DEVICE_CODE := shiva
+# Recovery Type (It can be treble,normal,SAR) [Only for About Section] *
+SHRP_REC_TYPE := treble
+# Recovery Type (It can be A/B or A_only) [Only for About Section] *
+SHRP_DEVICE_TYPE := A_only
+# Notch
+SHRP_NOTCH := true
+# EDL
+SHRP_EDL_MODE := 1
+SHRP_INTERNAL := /sdcard
+SHRP_EXTERNAL := /external_sd
+SHRP_OTG := /usb-otg
+SHRP_FLASH := 1
+# Path
+SHRP_REC := /dev/block/platform/bootdevice/by-name/recovery
+# Dark Mode
+SHRP_DARK := true
+SHRP_LITE := true
+# Magisk Addon (Safetynet fixed)
+SHRP_EXTERNAL_ADDON_PATH := "device/xiaomi/shiva/addon/"
+SHRP_EXTERNAL_ADDON_1_NAME := "Magisk Canary"
+SHRP_EXTERNAL_ADDON_1_INFO := "Magisk With Safetynet fixed"
+SHRP_EXTERNAL_ADDON_1_FILENAME := "app-debug.apk"
+SHRP_EXTERNAL_ADDON_1_BTN_TEXT := "Flash"
+SHRP_EXTERNAL_ADDON_1_SUCCESSFUL_TEXT := "Flashed Magisk"
+SHRP_INC_IN_REC_EXTERNAL_ADDON_1 := true
